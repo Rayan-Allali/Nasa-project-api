@@ -2,7 +2,7 @@
 
  let latestFlightNumber=100
  const launch={
-    flightNber: 100,
+    flightNumber: 100,
     mission:'Kepler Exploration X',
     rocket:'Explorer IS1',
     launchDate:new Date('December 27, 2030'),
@@ -11,20 +11,20 @@
     upcoming:true,
     success:true,
  };
- launches.set(launch.flightNber,launch)
+ launches.set(launch.flightNumber,launch)
  
  const getAllLaunches=()=>{
    return Array.from(launches.values())
  }
  const AddNewLaunch=(launch)=>{
-  latestFlightNumber++
+  latestFlightNumber++;
   launches.set(
     latestFlightNumber,
     Object.assign(launch, {
       success:true,
       upcoming:true,
       customers :['ZTM','NASA'],
-    flighNumber: latestFlightNumber
+    flightNumber: latestFlightNumber
   }))
  }
  const existsLaunchWithId =(launchId)=>{
